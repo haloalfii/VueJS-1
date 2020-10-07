@@ -1,7 +1,7 @@
 var app = new Vue({
     el : '#app',
     data : {
-        names :[
+        book :[
             {buku : 'Pulang',penulis : 'Tere Liye'},
         ],
         visibility : true
@@ -9,16 +9,16 @@ var app = new Vue({
     
     methods : {
         input(){
-            app.names.push({
+            app.book.push({
                 buku : this.buku,
                 penulis : this.penulis
             })
         },
         edit(){
-            this.$set(this.names, this.index-1,{buku:this.editbuku,penulis:this.editpenulis})		
+            this.$set(this.book, this.index-1,{buku:this.editbuku,penulis:this.editpenulis})		
         },
         deleteEvent: function(event) {
-            this.names.splice(event, 1);
+            this.book.splice(event, 1);
         }
     }
 })

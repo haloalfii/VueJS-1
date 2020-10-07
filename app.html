@@ -13,17 +13,26 @@
                 </tr>
                 <tr>
                     <td>
+                        Buku
+                    </td>
+                    <td>
+                        Penulis
+                    </td>
+                    <td>
+                        Action 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <ol>
-                            <li v-if="visibility" v-for="(com, idx) in names">
-                                <p>{{com.buku}}</p>
-                            </li>
+                            <li v-for="(com, idx) in book"><p>{{com.buku}}</p></li>
                         </ol>
                     </td>
                     <td>
-                        <p v-if="visibility" v-for="(com, idx) in names">{{com.penulis}}</p>
+                        <p v-for="(com, idx) in book">{{com.penulis}}</p>
                     </td>
                     <td>
-                        <p v-if="visibility" v-for="(com, idx) in names" v-on:click="deleteEvent(idx)"><button>Hapus</button></p>
+                        <p v-for="(com, idx) in book" v-on:click="deleteEvent(idx)"><button>Hapus</button></p>
                     </td>
                 </tr>
             </table>
